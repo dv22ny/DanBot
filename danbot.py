@@ -68,6 +68,9 @@ async def on_message(message):  # bulk of command handling
             msg = 'I have a job paying 70k, I made AIME, I have a 100 avg, have 2 internships, and am in 7 ecs and got a 36 act'.format(message)
             await message.channel.send(msg)
         await client.process_commands(message)
+        if message.content.startswith('socials'):
+            msg = 'Website: https://www.twisttutors.tk/, Twitter: https://twitter.com/TwistTutors, Instagram: https://www.instagram.com/Twist_Tutors/, Facebook: https://www.facebook.com/twist.tutors/'.format(message)
+            await message.channel.send(msg)
 @client.command()
 async def spam(ctx, member : discord.Member):
     spam_embed = discord.Embed(
